@@ -7,7 +7,7 @@ public class NonNegativeSequence {
      */
     public static void main(String[] args) {
         // TODO implement
-        for (int a = 95; a > 0; a -= 5) {
+        for (int a = 95; a >= 0; a -= 5) {
             System.out.print(a + " ");
         }
     }

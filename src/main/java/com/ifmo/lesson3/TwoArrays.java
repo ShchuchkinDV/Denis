@@ -21,12 +21,12 @@ public class TwoArrays {
         int average2 = average(randomNumbers2);
 
         // TODO implement
-        if(average1 == average2)
-            System.out.print("Среднее арифмитеческое обоих массивов равно");
-        if (average1 > average2)
+        if(average1 > average2){
             System.out.print("Среднее арифмитеческое первого массива больше второго");
-        if (average1 > average2)
+        }else if (average1 < average2)
             System.out.print("Среднее арифмитеческое втрорго массива больше первого");
+        else System.out.print("Среднее арифмитеческое массивов равны");
+
 
     }
 
@@ -41,8 +41,11 @@ public class TwoArrays {
     public static int average(int[] randomNumbers) {
         // TODO implement
         int sum = 0;
-        for(int i=0;i<randomNumbers.length;i++)sum += randomNumbers[i];
+        for(int i=0;i<randomNumbers.length;i++){
+            sum += randomNumbers[i];
+        }
 
-        return sum / randomNumbers.length;
+        return (sum / randomNumbers.length);
+
     }
 }

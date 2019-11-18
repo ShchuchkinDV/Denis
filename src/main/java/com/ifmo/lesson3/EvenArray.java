@@ -12,7 +12,8 @@ public class EvenArray {
 
         // TODO implement
         for (int i = 0; i < evenArray.length; i++)System.out.print(evenArray[i] + " ");
-        for (int i = 0; i < evenArray.length; i++)System.out.print("\n" + evenArray[i]);
+        System.out.println();
+        for (int i = 0; i < evenArray.length; i++)System.out.println(evenArray[i]);
     }
 
 

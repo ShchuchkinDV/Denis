@@ -10,9 +10,8 @@ public class Random4 {
         int[] randomNumbers = randomNumbers();
 
         // TODO implement
-
-        for(int i=0;i<randomNumbers.length;i++) System.out.print(randomNumbers[i] + " ");
-       if(isIncreasingSequence(randomNumbers) == false){
+       for(int i=0;i<randomNumbers.length-1;i++) System.out.print(randomNumbers[i] + " ");
+       if(isIncreasingSequence(randomNumbers)){
            System.out.println("массив является строго возрастающей последовательностью");
        }else
        System.out.println("массив НЕ является строго возрастающей последовательностью");
@@ -21,25 +20,16 @@ public class Random4 {
 
     public static int[] randomNumbers() {
         // TODO implement
-        int randomNumbers[] = new int[4];
-        for (int i = 0; i < randomNumbers.length; i++) randomNumbers[i] = (int) (Math.random() * 90 + 10);
+        int[] randomNumbers = new int[4];
+        for (int i = 0; i < randomNumbers.length; i++) randomNumbers[i] = (int) (Math.random() * 90+10);
 
         return randomNumbers;
     }
 
     public static boolean isIncreasingSequence(int[] randomNumbers) {
         // TODO implement
-        boolean sequence = false;
-        for(int i=0;i<randomNumbers.length; i++) {
-            if (i > 0) {
-                if (randomNumbers[i - 1] >= randomNumbers[i]) {
-                    sequence = true;
-                }
-            }
-            if (i == randomNumbers.length) {
-                sequence = false;
-            }
-        }
-        return sequence;
+        if(randomNumbers[0]<randomNumbers[1] && randomNumbers[1]<randomNumbers[2] && randomNumbers[2]<randomNumbers[3]){
+            return true;
+        }else return false;
     }
 }

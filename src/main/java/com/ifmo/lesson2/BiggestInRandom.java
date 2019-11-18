@@ -18,9 +18,8 @@ public class BiggestInRandom {
 
     public static int threeDigitRandom() {
         // TODO implement
-        final int min = 100;
-        final int max = 999;
-        int value = (int) (min + Math.random() * (max - min)) ;
+
+        int value = (int) (Math.random() * 900+100);
         return value;
     }
 

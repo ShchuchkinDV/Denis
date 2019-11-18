@@ -16,19 +16,13 @@ public class ClosestToTen {
 
     public static float closestToTen(float m, float n) {
         // TODO implement
-        float nearest = 0;
-        float x = Math.abs(10 - m);
-        float y = Math.abs(10 - n);
-        if (x==y){
-            System.out.println("Равно удаленны");
-        };
-        if (x > y){
-            nearest = n;
+
+        if (Math.abs(10 - m) > Math.abs(10 - n)) {
+            return n;
         }
-        if (x < y){
-            nearest = m;
+        else {
+            return m;
         }
 
-        return nearest;
     }
 }
